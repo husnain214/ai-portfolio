@@ -13,7 +13,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="md:hidden max-w-[80%] my-5 rounded-[38px] border-4 border-primary hover:border-primary relative isolate before:absolute before:inset-0 before:bg-gradient-3 before:-z-[1] before:rounded-full before:blur-[150px]">
+          <div className="md:hidden max-w-[80%] my-5 rounded-[38px] overflow-hidden border-4 border-primary hover:border-primary relative isolate before:absolute before:inset-0 before:bg-gradient-3 before:-z-[1] before:rounded-full before:blur-[150px]">
             <Image src="/me.png" alt="me" width="475" height="510" />
           </div>
 
