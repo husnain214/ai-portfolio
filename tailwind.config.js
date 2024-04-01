@@ -8,11 +8,23 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-1": "var(--gradient-1)",
+        "gradient-2": "var(--gradient-2)",
+        "gradient-3": "var(--gradient-3)",
+        "gradient-4": "var(--gradient-4)",
+      },
+      colors: {
+        primary: "var(--clr-theme-primary)",
+        secondary: "var(--clr-theme-secondary)",
+        "accent-1": "var(--clr-theme-accent-1)",
+        "accent-2": "var(--clr-theme-accent-2)",
+      },
+      fontFamily: {
+        sora: ["var(--ff-sora)"],
+        russo: ["var(--ff-russo)"],
       },
     },
   },
   plugins: [],
 };
+

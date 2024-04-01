@@ -3,31 +3,56 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --clr-body: #dddddd;
+  --clr-white: #ffffff;
+  --clr-black: #000000;
+  --clr-black-2: #050709;
+  --clr-heading-primary: #102039;
+  --clr-heading-secondary: #ea1826;
+  --clr-theme-primary: #8750f7;
+  --clr-theme-secondary: #2a1454;
+  --clr-theme-accent-1: #0f0715;
+  --clr-theme-accent-2: #140c1c;
+  --clr-grey-1: #747779;
+  --clr-grey-2: #d9d9d9;
+  --clr-grey-3: #dddddd;
+  --clr-grey-4: #22272c;
+
+  --gradient-1: linear-gradient(
+    260deg,
+    var(--clr-theme-secondary) 0%,
+    var(--clr-theme-primary) 100%
+  );
+
+  --gradient-2: linear-gradient(
+    to right,
+    var(--clr-theme-primary) 0%,
+    var(--clr-theme-secondary) 51%,
+    var(--clr-theme-primary) 100%
+  );
+
+  --gradient-3: linear-gradient(
+    260deg,
+    var(--clr-theme-primary) 0%,
+    rgba(115, 67, 210, 0) 100%
+  );
+
+  --gradient-4: linear-gradient(
+    to right,
+    var(--clr-theme-primary) 0%,
+    var(--clr-white) 100%
+  );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.cta-button {
+  background-size: 200%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.cta-button:hover {
+  background-position: -100%;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.container {
+  @apply w-full sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px] 2xl:max-w-[1320px] px-6 mx-auto;
 }
+
