@@ -23,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${sora.variable} ${russo.variable}`}>
-      <body className="min-h-screen font-sora text-base text-slate-50 bg-secondary h-[200vh]">
+      <body className="min-h-screen font-sora text-base text-slate-50 bg-secondary">
         <Header />
         {children}
       </body>

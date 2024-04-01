@@ -10,6 +10,7 @@ import {
 import { useState } from "react";
 import { navLinks } from "@/constants";
 import { desktopNavVars, mobileNavVars } from "@/motion";
+import Hamburger from "hamburger-react";
 
 export default function Header() {
   const { scrollY } = useScroll();
@@ -41,7 +42,7 @@ export default function Header() {
         }`}
       >
         <nav>
-          <div className="container flex justify-between relative z-20">
+          <div className="container flex justify-between items-center relative z-20">
             <Link href="">Logo</Link>
             <ul className="hidden sm:flex justify-between items-center gap-8 font-medium text-[15px]">
               {navLinks.map((navLink, index) => (
@@ -53,7 +54,6 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-
             <Link
               href=""
               className="cta-button hidden sm:flex bg-gradient-2 font-bold capitalize rounded-full px-9 py-2 transition-all duration-300"
@@ -61,13 +61,13 @@ export default function Header() {
               Hire me
             </Link>
 
-            <button
-              aria-label="toggle navigation"
-              className="sm:hidden"
-              onClick={() => setMobileShow((prev) => !prev)}
-            >
-              Open
-            </button>
+            <div className="sm:hidden">
+              <Hamburger
+                label="toggle navigation"
+                toggled={mobileShow}
+                toggle={setMobileShow}
+              />
+            </div>
           </div>
 
           <AnimatePresence>
@@ -90,6 +90,10 @@ export default function Header() {
                     {navLinks.map((link, index) => (
                       <MobileLink link={link} key={link.title + index} />
                     ))}
+                    <MobileLink
+                      link={{ title: "Hire me", href: "" }}
+                      style="cta-button"
+                    />
                   </motion.div>
                 </div>
               </motion.div>
@@ -101,12 +105,16 @@ export default function Header() {
   );
 }
 
-function MobileLink({ link }) {
+function MobileLink({ link, style }) {
   return (
     <div className="overflow-hidden">
       <motion.div
         variants={mobileNavVars.linkVars}
-        className="text-5xl uppercase overflow-hidden"
+        className={
+          style === "cta-button"
+            ? "cta-button overflow-hidden flex bg-gradient-2 font-bold capitalize rounded-full px-9 py-2"
+            : "text-5xl uppercase overflow-hidden"
+        }
       >
         <Link href={link.href}>{link.title}</Link>
       </motion.div>
