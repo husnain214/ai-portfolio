@@ -37,7 +37,7 @@ export default function Header() {
       <motion.header
         variants={desktopNavVars}
         animate={desktopShow ? "hidden" : "visible"}
-        className={`fixed top-0 w-full pt-7 pb-3.5 z-30 ${
+        className={`fixed top-0 w-full py-5 z-30 ${
           isDark ? "bg-accent-1" : "bg-transparent"
         }`}
       >

@@ -18,6 +18,7 @@ module.exports = {
         secondary: "var(--clr-theme-secondary)",
         "accent-1": "var(--clr-theme-accent-1)",
         "accent-2": "var(--clr-theme-accent-2)",
+        dark: "var(--clr-dark)",
       },
       fontFamily: {
         sora: ["var(--ff-sora)"],
