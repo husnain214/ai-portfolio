@@ -3,7 +3,7 @@ export default function Qualifications() {
     <section className="bg-accent-1 py-28">
       <div className="container grid md:grid-cols-2 gap-20 md:gap-40 md:justify-center">
         <div className="grid gap-5">
-          <h2 className="highlight-text font-bold text-4xl text-center mb-5 md:mb-10">
+          <h2 className="highlight-text font-bold text-3xl md:text-4xl text-center mb-5 md:mb-10">
             My Experience
           </h2>
           {/* */}
@@ -31,7 +31,7 @@ export default function Qualifications() {
         </div>
 
         <div className="grid gap-5">
-          <h2 className="highlight-text font-bold text-4xl text-center mb-5 md:mb-10">
+          <h2 className="highlight-text font-bold text-3xl md:text-4xl text-center mb-5 md:mb-10">
             My Experience
           </h2>
 
