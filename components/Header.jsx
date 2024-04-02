@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <>
       <motion.header
-        variants={desktopNavVars}
+        variants={mobileShow ? {} : desktopNavVars}
         animate={desktopShow ? "hidden" : "visible"}
         className={`fixed top-0 w-full py-5 z-30 ${
           isDark ? "bg-accent-1" : "bg-transparent"
@@ -77,7 +77,7 @@ export default function Header() {
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-primary text-slate-50 p-10"
+                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-secondary text-slate-50 p-10"
               >
                 <div className="flex h-full flex-col">
                   <motion.div
@@ -110,13 +110,18 @@ function MobileLink({ link, style }) {
     <div className="overflow-hidden">
       <motion.div
         variants={mobileNavVars.linkVars}
-        className={
-          style === "cta-button"
-            ? "cta-button overflow-hidden flex bg-gradient-2 font-bold capitalize rounded-full px-9 py-2"
-            : "text-5xl uppercase overflow-hidden"
-        }
+        className="text-3xl uppercase overflow-hidden"
       >
-        <Link href={link.href}>{link.title}</Link>
+        <Link
+          href={link.href}
+          className={
+            style === "cta-button"
+              ? "cta-button flex bg-gradient-2 font-bold capitalize rounded-full px-9 py-2 transition-all duration-300"
+              : ""
+          }
+        >
+          {link.title}
+        </Link>
       </motion.div>
     </div>
   );
