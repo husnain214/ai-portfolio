@@ -43,7 +43,12 @@ export default function Header() {
       >
         <nav>
           <div className="container flex justify-between items-center relative z-20">
-            <Link href="">Logo</Link>
+            <Link
+              href="/"
+              className="uppercase highlight-text font-bold text-xl md:text-2xl"
+            >
+              Talha
+            </Link>
             <ul className="hidden sm:flex justify-between items-center gap-8 font-medium text-[15px]">
               {navLinks.map((navLink, index) => (
                 <li

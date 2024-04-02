@@ -5,5 +5,15 @@ import ContactMe from "./home/ContactMe";
 import Hero from "./home/Hero";
 import Qualifications from "./home/Qualifications";
 import Services from "./home/Services";
+import Section from "./Section";
 
-export { Header, Hero, Services, Qualifications, Skills, ContactMe, Footer };
+export {
+  Header,
+  Section,
+  Hero,
+  Services,
+  Qualifications,
+  Skills,
+  ContactMe,
+  Footer,
+};
