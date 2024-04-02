@@ -2,7 +2,7 @@ export default function Services() {
   return (
     <section className="bg-dark py-28">
       <div className="container">
-        <h2 className="highlight-text text-xl sm:text-2xl md:text-4xl font-bold mb-4 text-center">
+        <h2 className="highlight-text font-bold text-3xl md:text-4xl text-center mb-5 md:mb-10">
           {" "}
           My Quality Services
         </h2>
